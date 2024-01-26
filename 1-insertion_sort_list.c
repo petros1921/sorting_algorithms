@@ -1,5 +1,11 @@
 #include "sort.h"
 
+/**
+ * node_swap - Swaps two nodes in a doubly linked list.
+ * @a1: Pointer to the first node
+ * @a2: Pointer to the second node
+ * By Kidus Yohannes and Petros Worku
+ */
 void node_swap(listint_t *a1, listint_t *a2)
 {
 	if (a1->prev)
@@ -12,6 +18,12 @@ void node_swap(listint_t *a1, listint_t *a2)
 	a2->next = a1;
 
 }
+
+/**
+ * insertion_sort_list - Sorts a doubly linked list of integers ascending order
+ * @list: Double pointer to the head of the list
+ * By Kidus Yohannes and Petros Worku
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *len, *tmp;

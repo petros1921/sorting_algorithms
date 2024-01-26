@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * int_swap - Swaps two integers.
+ * @array: Pointer to the array
+ * @size: Size of the array
+ * @a1: Pointer to the first integer
+ * @a2: Pointer to the second integer
+ * By Kidus Yohannes and Petros Worku
+ */
 void int_swap(int *array, size_t size, int *a1, int *a2)
 {
 	if (*a1 != *a2)
@@ -11,6 +19,15 @@ void int_swap(int *array, size_t size, int *a1, int *a2)
 	}
 }
 
+/**
+ * lomuto_partition - Partitions an array using the Lomuto partition scheme.
+ * @array: Pointer to the array to be partitioned
+ * @size: Size of the array
+ * @left: Leftmost index of the partition range
+ * @right: Rightmost index of the partition range
+ * Returns: The index of the pivot element after partitioning
+ * By Kidus Yohannes and Petros Worku
+ */
 size_t lomuto_partition(int *array, size_t size, ssize_t left, ssize_t right)
 {
 	int len, m, new_h = array[right];
@@ -23,6 +40,13 @@ size_t lomuto_partition(int *array, size_t size, ssize_t left, ssize_t right)
 	return (len);
 }
 
+/**
+ * lomuto_sort - Sorts an array of integers using the Lomuto partition scheme.
+ * @array: Pointer to the array to be sorted
+ * @left: Leftmost index of the partition range
+ * @right: Rightmost index of the partition range
+ * By Kidus Yohannes and Petros Worku
+ */
 void lomuto_sort(int *array, size_t size, ssize_t left, ssize_t right)
 {
 	if (left < right)
@@ -35,6 +59,12 @@ void lomuto_sort(int *array, size_t size, ssize_t left, ssize_t right)
 	}
 }
 
+/**
+ * quick_sort - Sorts an array of integers in ascending order
+ * @array: Pointer to the array to be sorted.
+ * @size: Size of the array.
+ * By Kidus Yohannes and Petros Worku
+ */
 void quick_sort(int *array, size_t size)
 {
 	if (!array || !size)

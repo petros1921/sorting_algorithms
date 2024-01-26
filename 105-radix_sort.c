@@ -1,5 +1,12 @@
 #include "sort.h"
 
+/**
+ * find_maximum - Finds the maximum value in an array.
+ * @arr: Pointer to the array
+ * @arr_size: Size of the array
+ * Returns: The maximum value in the array
+ * By Kidus Yohannes and Petros Worku
+ */
 int find_maximum(int *arr, int arr_size)
 {
 	int maximum_value, i;
@@ -13,6 +20,14 @@ int find_maximum(int *arr, int arr_size)
 	return maximum_value;
 }
 
+/**
+ * coun_sort - Performs counting sort based on a specific significant digit.
+ * @arr: Pointer to the array to be sorted
+ * @arr_size: Size of the array
+ * @sig_digit: The significant digit to consider for sorting
+ * @buff: Temporary buffer array for sorting
+ * By Kidus Yohannes and Petros Worku
+ */
 void coun_sort(int *arr, size_t arr_size, int sig_digit, int *buff)
 {
 	int digit_count[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -34,6 +49,12 @@ void coun_sort(int *arr, size_t arr_size, int sig_digit, int *buff)
 		arr[index] = buff[index];
 }
 
+/**
+ * radix_sort - Sorts an array of integers in ascending order
+ * @array: Pointer to the array to be sorted
+ * @size: Size of the array
+ * By Kidus Yohannes and Petros Worku
+ */
 void radix_sort(int *array, size_t size)
 {
 	int max_sort, signt, *b;

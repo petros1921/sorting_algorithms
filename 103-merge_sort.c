@@ -1,5 +1,14 @@
 #include "sort.h"
 
+/**
+ * merge_subarray - Merges two subarrays into a single sorted subarray.
+ * @sub: Pointer to the original array containing the subarrays
+ * @b: Temporary buffer array for merging
+ * @a1: Start index of the first subarray
+ * @a12: End index (exclusive) of the first subarray.
+ * @a2: End index (exclusive) of the second subarray
+ * By Kidus Yohannes and Petros Worku.
+ */
 void merge_subarray(int *sub, int *b, size_t a1, size_t a12, size_t a2)
 {
 	size_t index_sub, mid, buff = 0;
@@ -25,6 +34,14 @@ void merge_subarray(int *sub, int *b, size_t a1, size_t a12, size_t a2)
 	print_array(sub + a1, a2 - a1);
 }
 
+/**
+ * sort_recursive - Sorts the subarray within the given range.
+ * @arr: Pointer to the original array
+ * @temp: Temporary buffer array for merging subarrays
+ * @start: Start index of the subarray
+ * @end: End index (exclusive) of the subarray
+ * By Kidus Yohannes and Petros Worku.
+ */
 void sort_recursive(int *arr, int *temp, size_t start, size_t end)
 {
 	size_t middle;
@@ -38,6 +55,12 @@ void sort_recursive(int *arr, int *temp, size_t start, size_t end)
 	}
 }
 
+/**
+ * merge_sort - Sorts an array of integers in ascending order.
+ * @array: Pointer to the array to be sorted
+ * @size: Size of the array
+ * By Kidus Yohannes and Petros Worku.
+ */
 void merge_sort(int *array, size_t size)
 {
 	int *tmp;
